@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <style>
+      .hit{
+        /*border: solid blue; */
+        border-color:blue;
+        border-style:solid;
+        border-width:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var counter=0;
+      function monkey(){
+        if(counter % 2){
+          img1.src="img/x.png"
+        }else{
+          img1.src="img/o.png"
+        }
+        counter=counter+1;
+      }
+      function reset(){
+       clearInterval(handle)  
+       console.log("你點擊到幾次："+ hitcount)
+      }
+      function restart(){
+        handle=setInterval(monkey,1000)    
+      }
+      var hitcount=0;
+      function hit(e){
